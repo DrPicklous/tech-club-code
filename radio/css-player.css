@@ -1,22 +1,7 @@
-
-
---------------------------------------------------------------------------------
-<dj toggle><dj flag>        <likes> <messages>          <using as><login toggle> "hello, $user" | "guest mode"
-    <now playing>           <audio controls>                                        "now playing $song by $artist on $antenna&location"
-    _________________________________________________________________
-    |display queue                                         <dj play>|       [sidebar] --twitter, facebook,c9,github
-    |previous                                                   ""  |
-    |                                                           ""  |
-    |now                                                        ""  |
-    |                                                           ""  |
-    |                                                           ""  |
-    |next___________________________________________________________|
-    
-
-                                                                [terms] [contact]
---------------------------------------------------------------------------------
-@media mouse
-@media touch /* try to build it for both */
+@media mouse {
+}
+@media touch { /* try to build it for both */
+}
 #top-menu {
     /* aligns <using as> and <login toggle> right */
     /* "hello, $user" | "guest mode" */
@@ -33,10 +18,18 @@
 }
 .dialog {
     /* align center, fade everything else, transition */
+    position:absolute;
+    text-align:center;
+    padding:20px;
+    margin:-50%;
 }
 #player {
+    position:fixed;
+    width:90%;
+    height:90%;
 }
   #now-playing{
+      text-align:center;
       /* "playing $song by $artist on $antenna" */
   }
   #audio-controls{
@@ -45,16 +38,19 @@
   #player-list{
   }
   .previous{
-      /* .8 */
+      opacity:.8;
   }
   .now{
-      /* 1 */
+      opacity:1;
   }
   .next{
-      /* .9 */
+      opacity:.9;
   }
 #social {
     /*right, 20% from top*/
+    position:fixed;
+    right:0;
+    top:20%;
 }
     .social-button{
         /*cool theme*/
@@ -62,10 +58,10 @@
 .login{
 }
 #footer{
-    /*bottom*/
+    /*bottom, align links to the right*/
 }
-    .terms{
-        /*popup*/
+    #terms{
+        /*.dialog*/
     }
         #report-song{
         }
