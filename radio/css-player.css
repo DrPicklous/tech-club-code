@@ -16,22 +16,31 @@
                                                                 [terms] [contact]
 --------------------------------------------------------------------------------
 @media mouse
-@media touch
+@media touch /* try to build it for both */
 #top-menu {
+    /* aligns <using as> and <login toggle> right */
+    /* "hello, $user" | "guest mode" */
 }
     .tab{
+        /*aligns tabs left*/
     }
 #dj-controls {
+    /* generated objects have links to set antenna audio source */
+    /* circle, on hover show name of station & information */
 }
 .search {
+    /* make text entry look nice */
 }
 .dialog {
+    /* align center, fade everything else, transition */
 }
 #player {
 }
   #now-playing{
+      /* "playing $song by $artist on $antenna" */
   }
   #audio-controls{
+      /* specific format of play/stop stream */
   }
   #player-list{
   }
