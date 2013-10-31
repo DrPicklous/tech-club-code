@@ -55,3 +55,4 @@ master
 [audio streaming?](http://www.boutell.com/newfaq/creating/audio.html)
 [php scaling?](http://www.oracle.com/technetwork/articles/dsl/white-php-part1-355135.html)
 [prebuilt liquidsoap controls](http://savonet.sourceforge.net/tools.html)
+[php login](http://www.phpeasystep.com/phptu/6.html)

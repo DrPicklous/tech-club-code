@@ -1,0 +1,62 @@
+
+
+--------------------------------------------------------------------------------
+<dj toggle><dj flag>        <likes> <messages>          <using as><login toggle> "hello, $user" | "guest mode"
+    <now playing>           <audio controls>                                        "now playing $song by $artist on $antenna&location"
+    _________________________________________________________________
+    |display queue                                         <dj play>|       [sidebar] --twitter, facebook,c9,github
+    |previous                                                   ""  |
+    |                                                           ""  |
+    |now                                                        ""  |
+    |                                                           ""  |
+    |                                                           ""  |
+    |next___________________________________________________________|
+    
+
+                                                                [terms] [contact]
+--------------------------------------------------------------------------------
+@media mouse
+@media touch
+#top-menu {
+}
+    .tab{
+    }
+#dj-controls {
+}
+.search {
+}
+.dialog {
+}
+#player {
+}
+  #now-playing{
+  }
+  #audio-controls{
+  }
+  #player-list{
+  }
+  .previous{
+      /* .8 */
+  }
+  .now{
+      /* 1 */
+  }
+  .next{
+      /* .9 */
+  }
+#social {
+    /*right, 20% from top*/
+}
+    .social-button{
+        /*cool theme*/
+    }
+.login{
+}
+#footer{
+    /*bottom*/
+}
+    .terms{
+        /*popup*/
+    }
+        #report-song{
+        }

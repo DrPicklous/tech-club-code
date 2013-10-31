@@ -1,7 +1,7 @@
-DOCUMENTATION
+# DOCUMENTATION
 
 This is basically me trying to implement the laby concept in a more workable fashion.
-laby's project file can be found on [github][https://github.com/sgimenez/laby]
+laby's project file can be found on [github](https://github.com/sgimenez/laby)
 
 ### goals:
 * correct-ish gcc compiling
@@ -12,7 +12,7 @@ laby's project file can be found on [github][https://github.com/sgimenez/laby]
 * "mind geek!"
     * just wanted to mess around with it.
 
-#how it should run:
+##how it should run:
 
     1. check for running values/user configurations from gui?
     2. determine the max number of each item to place
@@ -23,26 +23,23 @@ laby's project file can be found on [github][https://github.com/sgimenez/laby]
     7. execute (or bust), multithreading?
     8. give pass/fail
 
-#the map & the rules explained:
+##the map & the rules explained:
 this function is the basics for thinking imperitively. while this program
 might not be as smart as you'd hope, it helps you see an interesting & complex
 problem that you can spend time solving. personally, the actual program is a
 bit weird... so you can type it in what ever language you'd prefer
 
-functions laby-world defines:
+### functions laby-world defines:
 
-look(); // identifies the objects one sqare infront of the bug
-forward(); // moves one square forward or returns an error
-left(); // turns bug counter-clockwise
-right(); // turns clockwise
-take(); // picks up rocks one square in front of the bug, doesn't move bug
-drop(); // places rocks one square in front of the bug, doesn't more bug
-escape(); // bug enters exit
+* look(); // identifies the objects one sqare infront of the bug
+* forward(); // moves one square forward or returns an error
+* left(); // turns bug counter-clockwise
+* right(); // turns clockwise
+* take(); // picks up rocks one square in front of the bug, doesn't move bug
+* drop(); // places rocks one square in front of the bug, doesn't more bug
+* escape(); // bug enters exit
 
 values look returns:V B R W E A Null;
-
-#an example:
-
 
 #changelog:
 * after an initial concept, it's clear my code is FAR from streamlined >.<
