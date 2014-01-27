@@ -9,13 +9,18 @@
 
 task main() {
   while (1 == 1){
-    //base
+    //tank tread
+    motor[port2] = vexRT[Ch2];
+    motor[port3] = vexRT[Ch2];
+    motor[port4] = vexRT[Ch3];
+    motor[port5] = vexRT[Ch3];
+    /*
     float powerfactor;
     powerfactor=vexRT[Ch2] / 127;
-    motor[port2] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch4];
-    motor[port4] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch4];
-    motor[port3] = floor(-powerfactor * vexRT[Ch1]) - vexRT[Ch4];
-    motor[port5] = floor(-powerfactor * vexRT[Ch1]) - vexRT[Ch4];
+    motor[port2] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
+    motor[port3] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
+    motor[port4] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
+    motor[port5] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];*/
     //pull
     if (vexRT[Btn6U] == 1){
       motor[port6] = 127;
@@ -35,6 +40,5 @@ task main() {
     }else {
       motor[port8] = 0;
     }
-    motor[port2] = 127;
   }
 }
