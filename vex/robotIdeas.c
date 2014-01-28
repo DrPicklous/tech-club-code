@@ -18,10 +18,10 @@ ch2 ch3
 task main() {
   while (1 == 1){
     //tank tread
-    motor[port2] = vexRT[Ch2];
-    motor[port3] = vexRT[Ch3];
-    motor[port4] = vexRT[Ch2];
-    motor[port5] = vexRT[Ch3];
+    motor[port2] = vexRT[Ch3];
+    motor[port3] = vexRT[Ch2];
+    motor[port4] = -vexRT[Ch3];
+    motor[port5] = -vexRT[Ch2];
     //a new idea: (make these into macros please ;3)
     
     //macro concept:
@@ -83,9 +83,9 @@ task main() {
     }
     //up
     if (vexRT[Btn5U] == 1){
-      motor[port8] = 127;
-    }else if (vexRT[Btn5D] == 1){
       motor[port8] = -127;
+    }else if (vexRT[Btn5D] == 1){
+      motor[port8] = 127;
     }else {
       motor[port8] = 0;
     }
