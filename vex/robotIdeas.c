@@ -83,9 +83,9 @@ task main() {
     }
     //up
     if (vexRT[Btn5U] == 1){
-      motor[port8] = 127;
-    }else if (vexRT[Btn5D] == 1){
       motor[port8] = -127;
+    }else if (vexRT[Btn5D] == 1){
+      motor[port8] = 127;
     }else {
       motor[port8] = 0;
     }
