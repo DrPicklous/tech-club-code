@@ -22,13 +22,35 @@ task main() {
     motor[port3] = vexRT[Ch3];
     motor[port4] = vexRT[Ch2];
     motor[port5] = vexRT[Ch3];
+    //a new idea: (make these into macros please ;3)
     /*
+    if (vexRT[Ch1] == 127){ //point turn
+      motor[port2] = 127; //FL
+      motor[port4] = 127; //BL
+      motor[port3] = -127; //FR
+      motor[port5] = -127; //BR
+    } else if (vexRT[Ch1] == -127){ //point turn
+      motor[port2] = -127; //FL
+      motor[port4] = -127; //BL
+      motor[port3] = +127; //FR
+      motor[port5] = +127; //BR
+    } else { //differential
+      // this code always goes half speed
+      motor[port2] = (vexRT[Ch2] - vexRT[Ch1])/2; //FL
+      motor[port4] = (vexRT[Ch2] - vexRT[Ch1])/2; //BL
+      motor[port3] = (vexRT[Ch2] + vexRT[Ch1])/2; //FR
+      motor[port5] = (vexRT[Ch2] + vexRT[Ch1])/2; //BR
+    }
+    */
+    /*
+    old, horribly broken concept
     float powerfactor;
     powerfactor=vexRT[Ch2] / 127;
     motor[port2] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
     motor[port3] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
     motor[port4] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
-    motor[port5] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];*/
+    motor[port5] = floor(powerfactor * vexRT[Ch1]) + vexRT[Ch1] + vexRT[Ch4];
+    */
     //pull
     if (vexRT[Btn6U] == 1){
       motor[port6] = 127;
