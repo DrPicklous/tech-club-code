@@ -40,15 +40,15 @@ task main() {
     if (vexRT[Ch1] == 127){ //point turn
       //macro call: leftgroup(127); rightgroup(-127);
       motor[port2] = 127; //FL
-      motor[port4] = 127; //BL
-      motor[port3] = -127; //FR
+      motor[port4] = -127; //BL
+      motor[port3] = 127; //FR
       motor[port5] = -127; //BR
     } else if (vexRT[Ch1] == -127){ //point turn
       //macro call: leftgroup(-127); rightgroup(127);
-      motor[port2] = -127; //FL
+      motor[port2] = +127; //FL
       motor[port4] = -127; //BL
       motor[port3] = +127; //FR
-      motor[port5] = +127; //BR
+      motor[port5] = -127; //BR
     } else { //differential
       /*macro call:
       leftgroup((vexRT[Ch2] + vexRT[Ch1])/2);
@@ -83,9 +83,9 @@ task main() {
     }
     //up
     if (vexRT[Btn5U] == 1){
-      motor[port8] = -127;
-    }else if (vexRT[Btn5D] == 1){
       motor[port8] = 127;
+    }else if (vexRT[Btn5D] == 1){
+      motor[port8] = -127;
     }else {
       motor[port8] = 0;
     }
