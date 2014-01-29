@@ -21,26 +21,26 @@ Ch2 NORTH+
 Ch3 NORTH+
 Ch4 EAST+
 */
+void pl(value){
+  motor[port6] = value;
+  motor[port7] = -value;
+}
+void lt(speed){
+  motor[port2] = speed;
+  motor[port4] = -speed;
+}
+void rt(speed){
+  motor[port3] = speed;
+  motor[port5] = -speed;
+}
 task main() {
   while (1 == 1){
-    void lt(speed){
-      motor[port2] = speed;
-      motor[port4] = -speed;
-    }
-    void rt(speed){
-      motor[port3] = speed;
-      motor[port5] = -speed;
-    }
     if (vexRT[Ch2] == 0){//point turns, positive is clockwise
       lt(vexRT[Ch1]);//east||north
       rt(-vexRT[Ch1]);//west||south
     }else {//differential
       lt(vexRT[Ch2] + vexRT[Ch1]);//north + east
       rt(vexRT[Ch2] - vexRT[Ch1]);//north - east
-    }
-    void pl(value){
-      motor[port6] = value;
-      motor[port7] = -value;
     }
     if (vexRT[Btn6U] == 1){
       pl(127);
