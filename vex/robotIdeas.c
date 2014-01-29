@@ -45,7 +45,7 @@ task main() {
     }
     if (vexRT[Btn6U] == 1){
       pl(127);
-    }else if (vexRT[Btn6D] == 1{
+    }else if (vexRT[Btn6D] == 1){
       pl(-127);
     }else {
       pl(0);
