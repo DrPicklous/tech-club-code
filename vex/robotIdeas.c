@@ -18,49 +18,51 @@ ch2 ch3
 task main() {
   while (1 == 1){
     //tank tread
+    /*
     motor[port2] = vexRT[Ch3];
     motor[port3] = vexRT[Ch2];
     motor[port4] = -vexRT[Ch3];
     motor[port5] = -vexRT[Ch2];
+    */
     //a new idea: (make these into macros please ;3)
-    
+    int speed;
     //macro concept:
     //calling it: leftgroup(value-from-joystick-and-if-statement);rightgroup(value-from-joystick-and-if-statement);
-    /*
-    void leftgroup(int speed){
+    void leftgroup(speed){
       motor[port2] = speed;
-      motor[port4] = speed;
-    }
-    void rightgroup(int speed){
-      motor[port3] = -speed;
       motor[port4] = -speed;
     }
-    */
-    /*
+    void rightgroup(speed){
+      motor[port3] = -speed;
+      motor[port5] = speed;
+    }
     if (vexRT[Ch1] == 127){ //point turn
-      //macro call: leftgroup(127); rightgroup(-127);
+      leftgroup(127);
+      rightgroup(-127);
+      /*
       motor[port2] = 127; //FL
       motor[port4] = -127; //BL
-      motor[port3] = 127; //FR
-      motor[port5] = -127; //BR
+      motor[port3] = -127; //FR
+      motor[port5] = 127; //BR */
     } else if (vexRT[Ch1] == -127){ //point turn
-      //macro call: leftgroup(-127); rightgroup(127);
-      motor[port2] = +127; //FL
-      motor[port4] = -127; //BL
-      motor[port3] = +127; //FR
-      motor[port5] = -127; //BR
-    } else { //differential
+      leftgroup(-127);
+      rightgroup(127);
+      /*
+      motor[port2] = -127; //FL
+      motor[port4] = 127; //BL
+      motor[port3] = -127; //FR
+      motor[port5] = 127; //BR */
+    } /*else { //differential
       /*macro call:
       leftgroup((vexRT[Ch2] + vexRT[Ch1])/2);
       rightgroup((vexRT[Ch2] - vexRT[Ch1)/2);
-      *//*
+      */
       // this code always goes half speed
-      motor[port2] = (vexRT[Ch2] - vexRT[Ch1])/2; //FL
-      motor[port4] = (vexRT[Ch2] - vexRT[Ch1])/2; //BL
-      motor[port3] = (vexRT[Ch2] + vexRT[Ch1])/2; //FR
-      motor[port5] = (vexRT[Ch2] + vexRT[Ch1])/2; //BR
-    }
-    */
+      /*motor[port2] = (vexRT[Ch2] + vexRT[Ch1]/2)/2; //FL
+      motor[port4] = (vexRT[Ch2] + vexRT[Ch1]/2)/2; //BL
+      motor[port3] = (vexRT[Ch2] - vexRT[Ch1]/2)/2; //FR
+      motor[port5] = (vexRT[Ch2] - vexRT[Ch1]/2)/2; //BR
+    }*/
     /*
     old, horribly broken concept
     float powerfactor;
