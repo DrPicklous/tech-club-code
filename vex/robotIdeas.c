@@ -21,15 +21,15 @@ Ch2 NORTH+
 Ch3 NORTH+
 Ch4 EAST+
 */
-void pl(value){
+void pl(int value){
   motor[port6] = value;
   motor[port7] = -value;
 }
-void lt(speed){
+void lt(int speed){
   motor[port2] = speed;
   motor[port4] = -speed;
 }
-void rt(speed){
+void rt(int speed){
   motor[port3] = speed;
   motor[port5] = -speed;
 }
