@@ -24,10 +24,12 @@ Ch4 EAST+
 void lt(int speed){
   motor[port2] = speed;
   motor[port4] = -speed;
+  int ltat = speed;
 }
 void rt(int speed){
   motor[port3] = speed;
   motor[port5] = -speed;
+  int rtat = speed;
 }
 task main() {
   while (1 == 1){
@@ -38,12 +40,25 @@ task main() {
       lt(vexRT[Ch2] + vexRT[Ch1]);//north + east
       rt(vexRT[Ch2] - vexRT[Ch1]);//north - east
     }
-    if (vexRT[Btn5U] == 1){
-      motor[port8] = -127;
-    }else if (vexRT[Btn5D] == 1){
+    if (vexRT[Btn6U] == 1 ){//auto tip-tread toggle
+      int at = 1;
+    }if (vexRT[Btn6D] == 1 ){
+      int at = 0;
+    }
+    if (int at != 1){//only execute manual control if toggle is off
+      if (vexRT[Btn5U] == 1){
+        motor[port8] = -127;
+      }else if (vexRT[Btn5D] == 1){
+        motor[port8] = 127;
+      }else {
+        motor[port8] = 0;
+      }
+    }
+    if (at == 1 && ltat >= 100 && rtat >= 100){//control direction of auto tread
       motor[port8] = 127;
-    }else {
-      motor[port8] = 0;
+    }
+    if (at == 1 && ltat <= -100 && rtat <= -100){
+      motor[port8] = -127;
     }
   }
 }
