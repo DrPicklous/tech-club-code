@@ -21,10 +21,6 @@ Ch2 NORTH+
 Ch3 NORTH+
 Ch4 EAST+
 */
-void pl(int value){
-  motor[port6] = value;
-  motor[port7] = -value;
-}
 void lt(int speed){
   motor[port2] = speed;
   motor[port4] = -speed;
@@ -41,13 +37,6 @@ task main() {
     }else {//differential
       lt(vexRT[Ch2] + vexRT[Ch1]);//north + east
       rt(vexRT[Ch2] - vexRT[Ch1]);//north - east
-    }
-    if (vexRT[Btn6U] == 1){
-      pl(127);
-    }else if (vexRT[Btn6D] == 1){
-      pl(-127);
-    }else {
-      pl(0);
     }
     if (vexRT[Btn5U] == 1){
       motor[port8] = -127;
