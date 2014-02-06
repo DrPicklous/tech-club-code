@@ -1,5 +1,5 @@
-# Github Guide for Lander Middle School | Cameron Whiting
-## What it is and How to use it
+## Github Guide for Lander Middle School | Cameron Whiting
+### What it is and How to use it
 
 > Git is a **S**ource **C**ode **M**anagement tool. It handles project files for you in an efficient,
 > collaborative Manner. You can use GitHub as a base for your operations if you don’t have git on a local
@@ -7,15 +7,15 @@
 
 ### Registering
 
-1 navigate to GitHub
-2 Register using a good handle
-3 Complete registration with your email
+1. navigate to GitHub
+2. Register using a good handle
+3. Complete registration with your email
 
 ### Creating a repository
 
-1 click ‘add repository’
-2 select ‘initialize with a README.md’
-3 describe the repository in this document.
+1. click ‘add repository’
+2. select ‘initialize with a README.md’
+3. describe the repository in this document.
     * All revisions will be visible so be appropriate.
 
 ### Committing
