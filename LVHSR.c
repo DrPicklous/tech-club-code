@@ -19,15 +19,13 @@ LR
 LR//why:
 ++F
 --B
-p6+//pl
-p7-//pl
-p8-//up
+p7-//pn
+p8-//pl
 Ch1 EAST+
 Ch2 NORTH+
 Ch3 NORTH+
 Ch4 EAST+
 */
-bool at = false;
 void lt(int speed){
   motor[port2] = speed;
   motor[port4] = -speed;
@@ -56,26 +54,19 @@ task usercontrol(){
       lt(vexRT[Ch2] + vexRT[Ch1]);//north + east
       rt(vexRT[Ch2] - vexRT[Ch1]);//north - east
     }
-    if ( vexRT[Btn6U] == 1 ) {
-    	bool at = true;
-    }
-    if ( vexRT[Btn6D] == 1 ) {
-    	bool at = false;
-    }
-    if (at != true){
-	    if (vexRT[Btn5U] == 1){
+    if (vexRT[Btn6U] == 1){
+ 	    motor[port7] = -127;
+    }else if (vexRT[Btn6D] == 1){
+      	motor[port7] = 127;
+    }else {
+      	motor[port7] = 0;
+    } 	
+    if (vexRT[Btn5U] == 1){
  	    motor[port8] = -127;
-    	}else if (vexRT[Btn5D] == 1){
+    }else if (vexRT[Btn5D] == 1){
       	motor[port8] = 127;
-    	}else {
+    }else {
       	motor[port8] = 0;
-    	}
-    }
-    if ( at == true && rtat >= 100 && ltat >= 100){
-    	motor[port8] = -127;
-    }
-    if ( at == true && rtat <= -100 && ltat <= -100){
-    	motor[port8] = 127;
     }
   }
 }
